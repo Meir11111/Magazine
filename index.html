@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Segoe+UI:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Магазин</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#categories">Категории</a></li>
+                    <li><a href="#products">Товары</a></li>
+                    <li><a href="#sale">Распродажа</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="cart-btn" onclick="document.querySelector('.cart-modal').classList.add('active')">
+                    🛒 <span class="cart-count">0</span>
+                </button>
+                <button class="wishlist-btn" onclick="document.querySelector('.wishlist-modal').classList.add('active')">
+                    ❤️ <span class="wishlist-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Добро пожаловать в наш магазин</h1>
+                <p>Лучшие товары по доступным ценам</p>
+                <a href="#products" class="btn">Смотреть товары</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Категории</h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="image/category1.jpg" alt="Категория 1">
+                    <h3>Категория 1</h3>
+                </div>
+                <div class="category-card">
+                    <img src="image/category2.jpg" alt="Категория 2">
+                    <h3>Категория 2</h3>
+                </div>
+                <div class="category-card">
+                    <img src="image/category3.jpg" alt="Категория 3">
+                    <h3>Категория 3</h3>
+                </div>
+                <div class="category-card">
+                    <img src="image/category4.jpg" alt="Категория 4">
+                    <h3>Категория 4</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Популярные товары</h2>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/photo-portrait-confident-senior-man-260nw-2468863109.webp" alt="Товар 1">
+                        <div class="product-actions">
+                            <button onclick="quickView(1, 'Товар 1', 1000, 'image/photo-portrait-confident-senior-man-260nw-2468863109.webp', 'Описание товара 1')">👁️</button>
+                            <button onclick="addToWishlist(1, 'Товар 1', 1000, 'image/photo-portrait-confident-senior-man-260nw-2468863109.webp')">❤️</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Товар 1</h3>
+                        <div class="product-price">
+                            <span class="price">1000 ₸</span>
+                            <span class="old-price">1500 ₸</span>
+                        </div>
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <button class="btn" onclick="addToCart(1, 'Товар 1', 1000, 'image/photo-portrait-confident-senior-man-260nw-2468863109.webp')">В корзину</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/portrait-ghanaian-man_53876-32448.avif" alt="Товар 2">
+                        <div class="product-actions">
+                            <button onclick="quickView(2, 'Товар 2', 1500, 'image/portrait-ghanaian-man_53876-32448.avif', 'Описание товара 2')">👁️</button>
+                            <button onclick="addToWishlist(2, 'Товар 2', 1500, 'image/portrait-ghanaian-man_53876-32448.avif')">❤️</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Товар 2</h3>
+                        <div class="product-price">
+                            <span class="price">1500 ₸</span>
+                            <span class="old-price">1800 ₸</span>
+                        </div>
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <button class="btn" onclick="addToCart(2, 'Товар 2', 1500, 'image/portrait-ghanaian-man_53876-32448.avif')">В корзину</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/images.jfif" alt="Товар 3">
+                        <div class="product-actions">
+                            <button onclick="quickView(3, 'Товар 3', 2000, 'image/images.jfif', 'Описание товара 3')">👁️</button>
+                            <button onclick="addToWishlist(3, 'Товар 3', 2000, 'image/images.jfif')">❤️</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Товар 3</h3>
+                        <div class="product-price">
+                            <span class="price">2000 ₸</span>
+                            <span class="old-price">2400 ₸</span>
+                        </div>
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <button class="btn" onclick="addToCart(3, 'Товар 3', 2000, 'image/images.jfif')">В корзину</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/images (1).jfif" alt="Товар 4">
+                        <div class="product-actions">
+                            <button onclick="quickView(4, 'Товар 4', 2500, 'image/images (1).jfif', 'Описание товара 4')">👁️</button>
+                            <button onclick="addToWishlist(4, 'Товар 4', 2500, 'image/images (1).jfif')">❤️</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Товар 4</h3>
+                        <div class="product-price">
+                            <span class="price">2500 ₸</span>
+                            <span class="old-price">3000 ₸</span>
+                        </div>
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <button class="btn" onclick="addToCart(4, 'Товар 4', 2500, 'image/images (1).jfif')">В корзину</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/ab67616d00001e02d3e518f1118994e4c58ae626.jfif" alt="Товар 5">
+                        <div class="product-actions">
+                            <button onclick="quickView(5, 'Товар 5', 3000, 'image/ab67616d00001e02d3e518f1118994e4c58ae626.jfif', 'Описание товара 5')">👁️</button>
+                            <button onclick="addToWishlist(5, 'Товар 5', 3000, 'image/ab67616d00001e02d3e518f1118994e4c58ae626.jfif')">❤️</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Товар 5</h3>
+                        <div class="product-price">
+                            <span class="price">3000 ₸</span>
+                            <span class="old-price">3600 ₸</span>
+                        </div>
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <button class="btn" onclick="addToCart(5, 'Товар 5', 3000, 'image/ab67616d00001e02d3e518f1118994e4c58ae626.jfif')">В корзину</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/ab67616d0000b273beefce407ff08ae7364731b6.jfif" alt="Товар 6">
+                        <div class="product-actions">
+                            <button onclick="quickView(6, 'Товар 6', 3500, 'image/ab67616d0000b273beefce407ff08ae7364731b6.jfif', 'Описание товара 6')">👁️</button>
+                            <button onclick="addToWishlist(6, 'Товар 6', 3500, 'image/ab67616d0000b273beefce407ff08ae7364731b6.jfif')">❤️</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Товар 6</h3>
+                        <div class="product-price">
+                            <span class="price">3500 ₸</span>
+                            <span class="old-price">4200 ₸</span>
+                        </div>
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <button class="btn" onclick="addToCart(6, 'Товар 6', 3500, 'image/ab67616d0000b273beefce407ff08ae7364731b6.jfif')">В корзину</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/AAACrr8Dz7gzZum3wkQFTQLH098QM-Inr55Z0fKT2gQop2vUC_OccJwDT0iqvbL6bdc1uXfD_ZRKSyNbwnOCTLbvQQo.jpg" alt="Товар 7">
+                        <div class="product-actions">
+                            <button onclick="quickView(7, 'Товар 7', 4000, 'image/AAACrr8Dz7gzZum3wkQFTQLH098QM-Inr55Z0fKT2gQop2vUC_OccJwDT0iqvbL6bdc1uXfD_ZRKSyNbwnOCTLbvQQo.jpg', 'Описание товара 7')">👁️</button>
+                            <button onclick="addToWishlist(7, 'Товар 7', 4000, 'image/AAACrr8Dz7gzZum3wkQFTQLH098QM-Inr55Z0fKT2gQop2vUC_OccJwDT0iqvbL6bdc1uXfD_ZRKSyNbwnOCTLbvQQo.jpg')">❤️</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Товар 7</h3>
+                        <div class="product-price">
+                            <span class="price">4000 ₸</span>
+                            <span class="old-price">4800 ₸</span>
+                        </div>
+                        <div class="product-rating">⭐⭐⭐⭐⭐</div>
+                        <button class="btn" onclick="addToCart(7, 'Товар 7', 4000, 'image/AAACrr8Dz7gzZum3wkQFTQLH098QM-Inr55Z0fKT2gQop2vUC_OccJwDT0iqvbL6bdc1uXfD_ZRKSyNbwnOCTLbvQQo.jpg')">В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sale" class="sale">
+        <div class="container">
+            <div class="section-header">
+                <h2>Специальные предложения</h2>
+            </div>
+            <div class="sale-grid">
+                <div class="sale-card">
+                    <div class="sale-content">
+                        <h3>Акция 1</h3>
+                        <p>Описание акции</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="sale-card">
+                    <div class="sale-content">
+                        <h3>Акция 2</h3>
+                        <p>Описание акции</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+                <div class="sale-card">
+                    <div class="sale-content">
+                        <h3>Акция 3</h3>
+                        <p>Описание акции</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>О нас</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Мы предлагаем широкий выбор качественных товаров по доступным ценам.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="number">1000+</span>
+                        <span class="label">Товаров</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">500+</span>
+                        <span class="label">Довольных клиентов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">50+</span>
+                        <span class="label">Брендов</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Контакты</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span>📍</span>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>г. Алматы, ул. Примерная, 123</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span>📞</span>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+7 (777) 123-45-67</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span>✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <textarea placeholder="Ваше сообщение" required></textarea>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="section-header">
+                <h2>Подпишитесь на новости</h2>
+                <p>Получайте информацию о новых товарах и акциях</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Ваш email" required>
+                <button type="submit" class="btn">Подписаться</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>О компании</h3>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Оплата</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Категории</h3>
+                    <ul>
+                        <li><a href="#categories">Все категории</a></li>
+                        <li><a href="#products">Новинки</a></li>
+                        <li><a href="#sale">Распродажа</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>📍 г. Алматы, ул. Примерная, 123</li>
+                        <li>📞 +7 (777) 123-45-67</li>
+                        <li>✉️ info@example.com</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Магазин. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div class="modal cart-modal">
+        <div class="modal-content">
+            <button class="close-modal">×</button>
+            <h2>Корзина</h2>
+            <div class="cart-empty">Корзина пуста</div>
+            <div class="cart-items"></div>
+            <div class="cart-total">0 ₸</div>
+            <button class="btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <div class="modal wishlist-modal">
+        <div class="modal-content">
+            <button class="close-modal">×</button>
+            <h2>Избранное</h2>
+            <div class="wishlist-items"></div>
+        </div>
+    </div>
+
+    <div class="modal quick-view-modal">
+        <div class="modal-content">
+            <button class="close-modal">×</button>
+            <img src="" alt="">
+            <div>
+                <h3></h3>
+                <div class="price"></div>
+                <p></p>
+                <button class="btn">В корзину</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
